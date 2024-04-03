@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+  float av1, av2, av3 , media = 0;
+printf("Informe a nota da AV1: ");
+  scanf("%f", &av1);
+  printf("informe a nota da AV2: ");
+  scanf("%f", &av2);
+  media = (av1 + av2) / 2;
+  printf("media %.2f" , media);
+  if (media >=7)
+    printf("\nAprovado");
+    else
+    if (media <5)
+      printf("\nReprovado");
+      else
+      printf("\nRecuperação");
+      if ("\nRecuperação" && media >=5)
+        printf("\nInforme a nota da AV3: ");
+  scanf("%f", &av3);
+  media = (av1 + av3) / 2;
+  if (media >=7)
+    printf("\nAprovado");
+  else
+    printf("\nReprovado");
+
+   return 0; }
