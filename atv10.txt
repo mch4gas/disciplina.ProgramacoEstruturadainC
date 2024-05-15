@@ -1,0 +1,29 @@
+#include <stdio.h>
+ 
+  int main() {
+      int vetor1[10], vetor2[10], vetorResultado[10];
+      int i;
+ 
+      printf("Digite os 10 valores para o primeiro vetor:\n");
+      for (i = 0; i < 10; i++) {
+          printf("Vetor1[%d]: ", i);
+          scanf("%d", &vetor1[i]);
+      }
+ 
+      printf("\nDigite os 10 valores para o segundo vetor:\n");
+      for (i = 0; i < 10; i++) {
+          printf("Vetor2[%d]: ", i);
+          scanf("%d", &vetor2[i]);
+      }
+ 
+      for (i = 0; i < 10; i++) {
+          vetorResultado[i] = vetor1[i] + vetor2[i];
+      }
+ 
+      printf("\nElementos do terceiro vetor:\n");
+      for (i = 0; i < 10; i++) {
+          printf("VetorResultado[%d]: %d\n", i, vetorResultado[i]);
+      }
+ 
+      return 0;
+  }
