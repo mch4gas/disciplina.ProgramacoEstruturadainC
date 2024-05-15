@@ -1,0 +1,52 @@
+#include <stdio.h>
+ 
+int main() {
+    float numeros[20];
+    float resultado[20];
+    char operacao;
+    int i;
+ 
+    for (i = 0; i < 20; i++) {
+        printf("Digite o %dº número: ", i + 1);
+        scanf("%f", &numeros[i]);
+    }
+ 
+    printf("Escolha a operação (soma [+], subtração [-], multiplicação [*] ou divisão [/]): ");
+    scanf(" %c", &operacao);
+ 
+    for (i = 0; i < 20; i++) {
+        float segundoNumero;
+        printf("Digite o segundo número para a operação: ");
+        scanf("%f", &segundoNumero);
+ 
+        switch (operacao) {
+            case '+':
+                resultado[i] = numeros[i] + segundoNumero;
+                break;
+            case '-':
+                resultado[i] = numeros[i] - segundoNumero;
+                break;
+            case '*':
+                resultado[i] = numeros[i] * segundoNumero;
+                break;
+            case '/':
+                if (segundoNumero != 0) {
+                    resultado[i] = numeros[i] / segundoNumero;
+                } else {
+                    printf("Erro: divisão por zero!\n");
+                    resultado[i] = 0; // Valor padrão em caso de erro
+                }
+                break;
+            default:
+                printf("Operação inválida!\n");
+                resultado[i] = 0; // Valor padrão em caso de operação inválida
+        }
+    }
+ 
+    printf("Resultados:\n");
+    for (i = 0; i < 20; i++) {
+        printf("R[%d] = %.2f\n", i, resultado[i]);
+    }
+ 
+    return 0;
+}
